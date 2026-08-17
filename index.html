@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Félix - Carpintería y Oficios</title>
+    <meta name="description" content="Servicios profesionales de carpintería a medida, reparaciones y oficios varios. Calidad y dedicación en cada proyecto.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Félix<span>.</span></a>
+            <nav class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#sobre-mi">Sobre Mí</a>
+                <a href="#contacto" class="btn-primary">Contacto</a>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#sobre-mi">Sobre Mí</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg">
+            <!-- 📸 AQUÍ VA LA FOTO PRINCIPAL (Fondo del Hero) -->
+            <!-- Recomendación: Una foto horizontal (landscape) tuya trabajando o de un proyecto destacado -->
+            <!-- Para cambiarla, solo modifica el texto 'assets/hero_carpentry.png' por el nombre de tu foto, ej: 'assets/mi_foto_principal.jpg' -->
+            <img src="assets/hero_carpentry.png" alt="José Félix - Oficios" />
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <h1 class="fade-in-up">Maestría en <span>Múltiples Oficios</span></h1>
+            <p class="fade-in-up delay-1">Carpintería, herrería y mecánica. Soluciones integrales con la precisión de un estudiante de medicina y la dedicación de un buen cristiano.</p>
+            <div class="hero-actions fade-in-up delay-2">
+                <a href="#servicios" class="btn-primary">Mis Servicios</a>
+                <a href="#contacto" class="btn-secondary">Solicitar Presupuesto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mis Servicios</h2>
+                <p>Ofrezco soluciones integrales para tus proyectos, combinando habilidades técnicas y atención al detalle en cada especialidad.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1: Carpintería -->
+                <!-- 🛠 PARA EL CARRUSEL: Pon tus fotos en la carpeta 'assets/carpinteria/' -->
+                <!-- Luego escribe los nombres de esas fotos separados por comas en data-images="..." -->
+                <div class="service-card" onclick="openGallery(this)" data-folder="carpinteria" data-images="1.jpg, 2.jpg, 3.jpg" style="cursor: pointer;" title="Haz clic para ver galería">
+                    <div class="service-img">
+                        <img src="assets/custom_furniture.png" alt="Trabajos de carpintería" />
+                    </div>
+                    <div class="service-info">
+                        <h3>Carpintería a Medida</h3>
+                        <p>Diseño y fabricación de muebles únicos, restauración y trabajos en madera con acabados precisos.</p>
+                        <span style="color: var(--color-primary); font-size: 0.9rem; margin-top: 10px; display: block; font-weight: bold;">Ver galería 📷</span>
+                    </div>
+                </div>
+
+                <!-- Service 2: Herrería -->
+                <!-- 🛠 Pon tus fotos en 'assets/herreria/' y anota sus nombres en data-images -->
+                <div class="service-card" onclick="openGallery(this)" data-folder="herreria" data-images="1.jpg, 2.jpg" style="cursor: pointer;" title="Haz clic para ver galería">
+                    <div class="service-img">
+                        <div class="placeholder-img"><span>Foto de Herrería</span></div>
+                    </div>
+                    <div class="service-info">
+                        <h3>Herrería</h3>
+                        <p>Fabricación y reparación de estructuras metálicas, rejas, puertas y trabajos de soldadura en general.</p>
+                        <span style="color: var(--color-primary); font-size: 0.9rem; margin-top: 10px; display: block; font-weight: bold;">Ver galería 📷</span>
+                    </div>
+                </div>
+
+                <!-- Service 3: Mecánica -->
+                <!-- 🛠 Pon tus fotos en 'assets/mecanica/' y anota sus nombres en data-images -->
+                <div class="service-card" onclick="openGallery(this)" data-folder="mecanica" data-images="1.jpg, 2.jpg" style="cursor: pointer;" title="Haz clic para ver galería">
+                    <div class="service-img">
+                        <img src="assets/handyman_tools.png" alt="Trabajos de mecánica" />
+                    </div>
+                    <div class="service-info">
+                        <h3>Mecánica</h3>
+                        <p>Mantenimiento y reparación mecánica, diagnosticando y solucionando problemas con dedicación y conocimiento técnico.</p>
+                        <span style="color: var(--color-primary); font-size: 0.9rem; margin-top: 10px; display: block; font-weight: bold;">Ver galería 📷</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí Section -->
+    <section id="sobre-mi" class="about section">
+        <div class="container">
+            <div class="about-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+                <div class="about-text">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Conoce a José Félix</h2>
+                    <p style="margin-bottom: 1rem; color: var(--color-text-muted); font-size: 1.1rem;">Soy estudiante de medicina con una profunda vocación por servir y ayudar a los demás. Esta misma precisión y cuidado que aplico en mis estudios médicos, la traslado a mis oficios como <strong>carpintero, herrero y mecánico</strong>.</p>
+                    <p style="margin-bottom: 1rem; color: var(--color-text-muted); font-size: 1.1rem;">Guiado por fuertes valores cristianos, realizo cada labor con honestidad, responsabilidad y dedicación, buscando siempre ofrecer el mejor resultado para quienes confían en mi trabajo.</p>
+                    
+                    <div class="bible-verse" style="margin-top: 2.5rem; padding-left: 1.5rem; border-left: 4px solid var(--color-primary); font-style: italic; color: var(--color-text-muted); font-size: 1.1rem;">
+                        "Y todo lo que hagáis, hacedlo de corazón, como para el Señor y no para los hombres."
+                        <br><strong style="color: var(--color-primary); font-style: normal; margin-top: 0.8rem; display: block; font-size: 1rem;">— Colosenses 3:23</strong>
+                    </div>
+                </div>
+                <div class="about-img" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
+                    <!-- 📸 AQUÍ VA LA FOTO DE JOSÉ FÉLIX -->
+                    <!-- Recomendación: Una foto tuya, preferiblemente trabajando o sonriendo en el taller -->
+                    <div class="placeholder-img" style="height: 450px;"><span>Foto de José Félix</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact section">
+        <div class="container">
+            <div class="contact-card">
+                <div class="contact-info">
+                    <h2>¿Tienes un proyecto en mente?</h2>
+                    <p>Hablemos sobre tu idea. Te asesoro y te doy un presupuesto sin compromiso.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="icon">📞</span>
+                            <div>
+                                <h4>Llámanos o envíanos un WhatsApp</h4>
+                                <!-- 📱 AQUÍ ACTUALIZAMOS EL NÚMERO VISUAL -->
+                                <p class="phone-number">+58 412-8394310</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📍</span>
+                            <div>
+                                <h4>Servicio de Confianza</h4>
+                                <p>Disponible para visitas y trabajos garantizando responsabilidad y transparencia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-action">
+                    <!-- 🔗 AQUÍ ESTÁ EL ENLACE DE WHATSAPP (Asegúrate que el número coincida) -->
+                    <a href="https://wa.me/584128394310" class="btn-whatsapp" target="_blank">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        Contactar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Félix<span>.</span></div>
+                <p>&copy; 2026 Carpintería y Oficios Félix. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Galería / Carrusel -->
+    <div id="galleryModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle" style="color: var(--color-primary); font-size: 1.5rem; text-align: center;">Galería</h3>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Las imágenes se insertarán aquí dinámicamente con JS -->
+                </div>
+                <button class="carousel-btn prev-btn">&#10094;</button>
+                <button class="carousel-btn next-btn">&#10095;</button>
+            </div>
+            <!-- Mensaje temporal para cuando no encuentra la foto -->
+            <p id="carouselError" style="display: none; text-align: center; padding: 2rem; color: var(--color-text-muted);">
+                Aún no hay fotos en esta carpeta o los nombres no coinciden.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
