@@ -1,0 +1,4 @@
+# Ignore zip files and reference HTML download at root
+*.zip
+Carpent*
+/WhatsApp Image *.jpeg
